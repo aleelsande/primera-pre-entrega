@@ -6,10 +6,7 @@ let manzana = 60
 let pera = 70
 let naranja = 80
 
-
-
-/*let cantidadB = prompt("ingrese la cantidad de kgs bananas que desea.\n en caso de no desear bananas precione 0")
-alert("bienvenido "+ nombre+ " " + apellido + " a la verduleria virtual")*/
+alert("bienvenido "+ nombre + " "+ apellido+" a la verduleria online.")
 
 while (opcion != 0) {
     opcion= parseInt(prompt("para consultar los precios precione 1\npara salir precione 0"))
