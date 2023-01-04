@@ -1,24 +1,30 @@
-const productosMuebleria = [
-    {id:1,nombre:"mesa ratona", tipo: "mesa", precio: 22000},
-    {id:2,nombre:"sillita", tipo: "silla", precio: 22000},
-    {id:3,nombre:"cama grande", tipo: "cama", precio: 22000},
-    {id:4,nombre:"cama chica", tipo: "cama", precio: 22000},
-    {id:5,nombre:"ropero grande", tipo: "ropero", precio: 22000},
-    {id:6,nombre:"ropero chico", tipo: "ropero", precio: 22000},
-    {id:7,nombre:"mesa cuadrada", tipo: "mesa", precio: 25000}
-]
+let nombre = prompt("ingresar nombre")
+let apellido = prompt("ingrese apellido")
+let opcion
+let banana = 50
+let manzana = 60
+let pera = 70
+let naranja = 80
 
+alert("bienvenido "+ nombre + " "+ apellido+" a la verduleria online.")
 
-let ingresarId = prompt("ingresa el id)")
-let buscarId = productosMuebleria.filter(el => el.id == (ingresarId))
+while (opcion != 0) {
+    opcion= parseInt(prompt("para consultar los precios precione 1\npara salir precione 0"))
+    if (opcion ===1) {
+        alert("banana " + banana + "$kg\n"+"manzana " + manzana + "$kg\n"+"pera " + pera + "$kg\n"+"naranja " + naranja + "$kg")
+	    let compraB= parseInt(prompt("ingrese la cantidad de kgs de bananas que desea.\n en caso de no desear bananas precione 0"))
+	    let compraP= parseInt(prompt("ingrese la cantidad de kgs de peras que desea.\n en caso de no desear peras precione 0"))
+	    let compraN= parseInt(prompt("ingrese la cantidad de kgs de naranjas que desea.\n en caso de no desear naranjas precione 0"))
+        
+	    let compraM= parseInt(prompt("ingrese la cantidad de kgs de manzanas que desea.\n en caso de no desear manzanas precione 0"))
+        alert("el total de los articulos seleccionados es: $" + ((compraB * banana)+(compraP * pera)+(compraM * manzana)+(compraN*naranja)))
+        break
+    }else if(opcion ===0){
+        alert("que tenga un buen dia")
+        break
+    }else{
+        alert("ingrese un numero valido")
+    }
+ }
 
-buscarId.map(el => console.log(el.nombre+ " $"+ el.precio))
-
-let Id = ""
-if (buscarId.length !=0){
-    let Id = buscarId.nombre + " $ " + buscarId.precio
-    alert(Id)
-} else{
-    alert("sin stock")
-}
-
+ 
